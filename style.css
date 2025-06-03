@@ -161,4 +161,32 @@ h2 {
   margin-bottom: 20px;
   border: 3px solid #0077cc;
 }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;       /* center horizontally */
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
 
