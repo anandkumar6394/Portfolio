@@ -134,4 +134,23 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+h2 {
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  color: #0077cc;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
 
