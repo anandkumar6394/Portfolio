@@ -72,3 +72,10 @@ body {
   background: linear-gradient(to right, orange, orangered);
   border-radius: 20px;
 }
+.profile-pic img {
+  transition: transform 0.5s ease;
+}
+
+.profile-pic img:hover {
+  transform: scale(1.05);
+}
