@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anand | Data Analyst Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -16,27 +18,26 @@
       <p>Aspiring Data Analyst | Passionate about Excel, Power BI & Data-Driven Decisions</p>
     </div>
   </section>
-  <!-- Skills Section -->
-<section id="skills">
-  <h2 class="section-title">My Skills</h2>
+ <section id="skills">
+  <h2 class="section-title" data-aos="fade-up">My Skills</h2>
   <div class="skills-container">
-    <div class="skill-box">
+    <div class="skill-box" data-aos="zoom-in" data-aos-delay="100">
       <h3>Excel</h3>
       <div class="skill-bar"><div class="bar-fill" style="width: 90%;"></div></div>
     </div>
-    <div class="skill-box">
+    <div class="skill-box" data-aos="zoom-in" data-aos-delay="200">
       <h3>Power BI</h3>
       <div class="skill-bar"><div class="bar-fill" style="width: 85%;"></div></div>
     </div>
-    <div class="skill-box">
+    <div class="skill-box" data-aos="zoom-in" data-aos-delay="300">
       <h3>SQL</h3>
       <div class="skill-bar"><div class="bar-fill" style="width: 80%;"></div></div>
     </div>
-    <div class="skill-box">
+    <div class="skill-box" data-aos="zoom-in" data-aos-delay="400">
       <h3>Data Cleaning</h3>
       <div class="skill-bar"><div class="bar-fill" style="width: 88%;"></div></div>
     </div>
-    <div class="skill-box">
+    <div class="skill-box" data-aos="zoom-in" data-aos-delay="500">
       <h3>Dashboarding</h3>
       <div class="skill-bar"><div class="bar-fill" style="width: 90%;"></div></div>
     </div>
@@ -45,6 +46,12 @@
 <!-- Link to skills section in Navbar -->
 <a href="#skills">Skills</a>
   <script src="script.js"></script>
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
 
