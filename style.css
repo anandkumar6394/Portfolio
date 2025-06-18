@@ -315,3 +315,16 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.about-text ul {
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.about-text li {
+  margin-bottom: 12px;
+}
+
+.about-text strong {
+  color: #ff6f00;
+}
