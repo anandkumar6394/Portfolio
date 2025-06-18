@@ -339,3 +339,24 @@ html {
 .skill-concepts li {
   margin-bottom: 6px;
 }
+.skill-concepts {
+  margin-top: 10px;
+  padding-left: 0; /* Remove extra left padding */
+  list-style-position: inside; /* Align bullets properly */
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.skill-concepts li {
+  margin-left: 10px; /* Slight indent to align with heading */
+  margin-bottom: 6px;
+}
+.skill-concepts {
+  padding-left: 0;
+}
+
+.skill-concepts li {
+  text-indent: -1em;
+  padding-left: 1.5em;
+  margin-bottom: 6px;
+}
