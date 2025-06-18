@@ -328,3 +328,14 @@ html {
 .about-text strong {
   color: #ff6f00;
 }
+.skill-concepts {
+  margin-top: 10px;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: #ccc;
+  list-style-type: disc;
+}
+
+.skill-concepts li {
+  margin-bottom: 6px;
+}
