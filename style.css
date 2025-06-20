@@ -369,3 +369,22 @@ html {
   display: inline-block;
   padding-left: 10px; /* this shifts text to the right while keeping bullet on left */
 }
+.box-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 0 15px #ff5500;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 480px; /* ✅ fixed height to keep all equal */
+}
