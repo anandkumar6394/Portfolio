@@ -454,3 +454,80 @@ html {
     margin-bottom: 6px;
   }
 </style>
+<style>
+  .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .box {
+    background-color: #111;
+    padding: 25px 20px;
+    border-radius: 20px;
+    width: 420px;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: auto; /* ✅ Remove fixed height to auto-fit content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .box:hover {
+    transform: translateY(-10px);
+  }
+
+  .box h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  .skill-bar {
+    background-color: #333;
+    height: 8px;
+    border-radius: 10px;
+    margin: 10px 0 25px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: linear-gradient(to right, orange, red);
+    border-radius: 10px;
+  }
+
+  .box ul {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.8;
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .box ul li {
+    margin-bottom: 5px;
+  }
+
+  /* ✅ Mobile responsive fix */
+  @media (max-width: 480px) {
+    .box {
+      width: 90%;
+      padding: 20px 15px;
+    }
+
+    .box h2 {
+      font-size: 20px;
+    }
+
+    .box ul {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  }
+</style>
