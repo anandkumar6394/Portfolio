@@ -531,3 +531,10 @@ html {
     }
   }
 </style>
+.skill-bar {
+  background-color: #333;
+  height: 18px; /* 🔥 Increased from 8px to 18px */
+  border-radius: 10px;
+  margin: 10px 0 25px;
+  overflow: hidden;
+}
