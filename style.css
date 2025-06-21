@@ -538,3 +538,12 @@ html {
   margin: 10px 0 25px;
   overflow: hidden;
 }
+.skill-box {
+  background-color: #111;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  box-shadow: 0 0 20px 5px #ff8000; /* SAME as About Me box */
+  margin: 20px;
+}
+box-shadow: 0 0 10px 2px #ff8000;  /* OLD (dull glow) */
