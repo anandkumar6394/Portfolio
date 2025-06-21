@@ -785,3 +785,31 @@ body {
   border: 5px solid orange;
   margin-bottom: 20px;
 }
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid orange;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  color: orange;
+}
+
+.hero p {
+  font-size: 22px;
+  color: #ddd;
+}
