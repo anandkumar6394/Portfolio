@@ -863,3 +863,19 @@ body {
   cursor: pointer;
   box-shadow: 0 0 30px 5px orange;
 }
+.about-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.about-box {
+  background-color: #111;
+  border-radius: 30px;
+  box-shadow: 0 0 40px 10px orange;
+  padding: 40px;
+  width: 85%;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
