@@ -835,20 +835,22 @@ body {
   color: #ccc;
   max-width: 800px;
 }
-.about-box {
-  background-color: #111;
-  padding: 40px;
-  border-radius: 30px;
-  box-shadow: 0 0 30px 5px orange;
-  text-align: center;
-  color: white;
-  width: 80%;
-  margin: auto;
+.about-section {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+  margin-bottom: 120px; /* 👈 Extra space for bottom glow */
 }
 
-.about-box h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
+.about-box {
+  padding: 40px;
+  padding-bottom: 60px; /* 👈 Ensure button & glow get breathing space */
+  background-color: #111;
+  border-radius: 30px;
+  box-shadow: 0 0 40px 10px orange;
+  max-width: 1200px;
+  width: 90%;
+  text-align: left;
 }
 
 .about-line {
@@ -878,21 +880,4 @@ body {
   border-radius: 40px;
   cursor: pointer;
   box-shadow: 0 0 30px 5px orange;
-}
-.about-section {
-  display: flex;
-  justify-content: center;
-  margin: 100px auto;
-  margin-bottom: 120px; /* 👈 Extra space for bottom glow */
-}
-
-.about-box {
-  padding: 40px;
-  padding-bottom: 60px; /* 👈 Ensure button & glow get breathing space */
-  background-color: #111;
-  border-radius: 30px;
-  box-shadow: 0 0 40px 10px orange;
-  max-width: 1200px;
-  width: 90%;
-  text-align: left;
 }
