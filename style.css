@@ -838,34 +838,6 @@ body {
 .about-section {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
-.about-box {
-  background-color: #111;
-  border-radius: 30px;
-  box-shadow: 0 0 40px 10px orange;
-  padding: 40px;
-  width: 85%; /* 👈 Exactly equal to hero section */
-  max-width: 1100px; /* 👈 Hero section ki max width ke equal */
-  box-sizing: border-box;
-}
-
-.hire-button {
-  background: linear-gradient(to right, orange, red);
-  color: white;
-  font-size: 20px;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 40px;
-  cursor: pointer;
-  box-shadow: 0 0 30px 5px orange;
-}
-.about-section {
-  display: flex;
-  justify-content: center;
   margin-top: 100px;
   margin-bottom: 100px;
 }
@@ -877,5 +849,53 @@ body {
   padding: 40px;
   width: 85%;
   max-width: 1100px;
+  color: white;
+  text-align: left;
   box-sizing: border-box;
+}
+
+.about-box h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-list li {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-list li strong {
+  margin-left: 8px;
+}
+
+.hire-me-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.hire-me-button button {
+  background: linear-gradient(to right, orange, red);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 0 30px orange;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hire-me-button button:hover {
+  transform: scale(1.05);
 }
