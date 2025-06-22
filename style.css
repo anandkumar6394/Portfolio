@@ -838,37 +838,19 @@ body {
 .about-section {
   display: flex;
   justify-content: center;
-  margin: 100px auto;
-  margin-bottom: 120px; /* 👈 Extra space for bottom glow */
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .about-box {
-  padding: 40px;
-  padding-bottom: 60px; /* 👈 Ensure button & glow get breathing space */
   background-color: #111;
   border-radius: 30px;
   box-shadow: 0 0 40px 10px orange;
-  max-width: 1200px;
-  width: 90%;
-  text-align: left;
-}
-
-.about-line {
-  display: flex;
-  align-items: start;
-  gap: 10px;
-  justify-content: start;
-  text-align: left;
-  margin-bottom: 12px;
-  line-height: 1.6;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.about-line .icon {
-  min-width: 20px;
-  font-size: 20px;
+  padding: 40px;
+  width: 85%; /* 👈 Exactly equal to hero section */
+  max-width: 1100px; /* 👈 Hero section ki max width ke equal */
+  box-sizing: border-box;
 }
 
 .hire-button {
