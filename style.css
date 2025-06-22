@@ -871,10 +871,11 @@ body {
   font-size: 1.2rem;
   display: flex;
   align-items: flex-start;
+  gap: 10px;
 }
 
 .about-list li strong {
-  margin-left: 8px;
+  margin-right: 5px;
 }
 
 .hire-me-button {
