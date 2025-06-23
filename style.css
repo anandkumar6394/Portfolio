@@ -895,3 +895,32 @@ body {
 .hire-me-button button:hover {
   transform: scale(1.05);
 }
+.about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.about-item span {
+  font-weight: bold;
+  min-width: 110px;
+}
+
+@media (max-width: 600px) {
+  .about-item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    word-break: break-word;
+  }
+
+  .about-item span {
+    min-width: unset;
+    font-weight: bold;
+  }
+
+  .about-box {
+    padding: 20px;
+  }
+}
