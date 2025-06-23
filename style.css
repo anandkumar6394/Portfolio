@@ -589,11 +589,6 @@ body {
   align-items: flex-start;
 }
 
-.about-list li::before {
-  content: '🔥';
-  margin-right: 10px;
-  display: inline-block;
-}
 
 /* Hire Button */
 .hire-button {
