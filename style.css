@@ -895,6 +895,3 @@ body {
 .hire-me-button button:hover {
   transform: scale(1.05);
 }
-.glow-box {
-  box-shadow: 0 0 35px 5px #ff8000;
-}
