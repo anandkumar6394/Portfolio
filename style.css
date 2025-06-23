@@ -799,7 +799,7 @@ body {
   padding: 40px 20px;
   background-color: #111;
   border-radius: 30px;
-  box-shadow: 0 0 30px 5px orange;
+ box-shadow: 0 0 35px 5px #ff8000;
   display: flex;
   flex-direction: column;
   align-items: center;
