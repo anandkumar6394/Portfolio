@@ -873,28 +873,30 @@ body {
   margin-right: 5px;
 }
 
-.hire-me-button {
+.hire-button-container {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-.hire-me-button button {
-  background: linear-gradient(to right, orange, red);
-  border: none;
-  padding: 15px 30px;
-  border-radius: 30px;
+.hire-button {
+  padding: 12px 30px;
+  background: linear-gradient(to right, #ff8000, #ff0000);
   color: white;
-  font-size: 1.2rem;
   font-weight: bold;
-  box-shadow: 0 0 30px orange;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 20px #ff8000;
+  transition: all 0.3s ease;
 }
 
-.hire-me-button button:hover {
+.hire-button:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 25px #ff4500;
 }
+
 .about-item {
   display: flex;
   align-items: flex-start;
