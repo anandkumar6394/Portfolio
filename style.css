@@ -936,13 +936,3 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-.about-box {
-  background-color: #121212;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 35px 5px #ff8000;
-  width: 100%;             
-  max-width: none;       
-  text-align: left;
-  margin: 0 auto;
-}
