@@ -1,938 +1,233 @@
+/* ========== Global Styles ========== */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #0a0a0a;
-  color: #fff;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+  scroll-behavior: smooth;
 }
 
-#hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 100px 20px;
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* ========== Hero Section ========== */
+.hero {
   text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(145deg, #111, #000);
+  border-radius: 30px;
+  box-shadow: 0 0 40px 10px #ff6600;
+  margin: 40px auto;
+  max-width: 900px;
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #ff6b00;
+  border: 3px solid #ff6600;
   margin-bottom: 20px;
 }
 
-#hero h1 span {
-  color: #ff6b00;
+.hero span {
+  color: #ff6600;
 }
-#skills {
-  padding: 60px 20px;
+
+/* ========== Section Container ========== */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 40px 20px;
+}
+
+/* ========== About Box ========== */
+.about-box {
+  background: #111;
+  border-radius: 30px;
+  box-shadow: 0 0 40px 10px #ff6600;
+  padding: 40px 30px;
+  max-width: 900px;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.about-box h2 {
   text-align: center;
-  background-color: #111;
+  font-size: 36px;
+  margin-bottom: 30px;
 }
 
-.section-title {
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 40px;
+.about-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 10px;
 }
 
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
+.about-item span {
+  font-weight: bold;
+  color: white;
 }
 
-.skill-box {
-  background-color: #1a1a1a;
-  padding: 20px;
-  border-radius: 12px;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(255, 165, 0, 0.2);
+/* ========== Hire Me Button ========== */
+.hire-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.hire-button {
+  background: linear-gradient(to right, orange, red);
+  padding: 15px 30px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 40px #ff6600;
+  display: inline-block;
   transition: transform 0.3s ease;
 }
 
-.skill-box:hover {
+.hire-button:hover {
   transform: scale(1.05);
 }
 
-.skill-bar {
-  background-color: #333;
-  height: 10px;
+/* ========== Skills Section ========== */
+.skills-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.skill-box {
+  background: #111;
+  padding: 30px;
   border-radius: 20px;
+  box-shadow: 0 0 20px #ff6600;
+}
+
+.skill-box h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.progress-bar {
+  background: #333;
+  border-radius: 10px;
   overflow: hidden;
-  margin-top: 10px;
+  margin-bottom: 15px;
+  height: 10px;
 }
 
-.bar-fill {
-  height: 100%;
-  background: linear-gradient(to right, orange, orangered);
-  border-radius: 20px;
-}
-.profile-pic img {
-  transition: transform 0.5s ease;
+.progress {
+  background: linear-gradient(to right, orange, red);
+  height: 10px;
+  border-radius: 10px;
 }
 
-.profile-pic img:hover {
-  transform: scale(1.05);
-}
-#projects {
-  padding: 60px 20px;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  color: #222;
-}
-
+/* ========== Projects Section ========== */
 .project-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  padding: 20px;
 }
 
 .project-card {
-  background: #fff;
-  border-radius: 0px;
+  background: #111;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff6600;
+  width: 300px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  width: 400px;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
 }
 
 .project-card img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 200px;
+  object-fit: cover;
 }
 
 .project-info {
   padding: 20px;
 }
 
-.project-info h3 {
-  font-size: 24px;
-  color: #1a1a1a;
-  margin-bottom: 10px;
-}
-
-.project-info p {
-  font-size: 16px;
-  color: #555;
-}
-
-/* Fade Up Animation */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 2s ease forwards;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#skills h2 {
-  color: #fff; /* Set it to white or any light color */
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-#skills {
-  opacity: 1;
-}
-#projects {
-  background-color: #111; /* Or use the same color used in hero/skills */
-  color: #fff; /* To ensure text is visible */
-  padding: 4rem 2rem;
-}
-#projects h2 {
-  color: #fff; /* Set it to white or any light color */
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-.resume-section {
-  background-color: #0a0a0a;
-  padding: 80px 20px;
-  text-align: center;
-}
-
 .section-title {
+  text-align: center;
+  color: #ff6600;
   font-size: 36px;
-  color: #fff;
-  margin-bottom: 30px;
-  font-weight: 700;
+  margin-top: 60px;
+}
+
+/* ========== Resume Box ========== */
+.resume-section {
+  padding: 60px 20px;
+  background-color: #0d0d0d;
 }
 
 .resume-box {
-  background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
-  padding: 40px;
+  background: #111;
   border-radius: 20px;
-  box-shadow: 0 0 25px rgba(255, 140, 0, 0.3);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.resume-text {
-  font-size: 18px;
-  color: #ccc;
-  margin-bottom: 25px;
+  box-shadow: 0 0 30px #ff6600;
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
 }
 
 .resume-btn {
-  background: linear-gradient(90deg, #ff6a00, #ee0979);
-  color: #fff;
-  padding: 14px 30px;
-  font-size: 18px;
-  border-radius: 50px;
+  margin-top: 20px;
+  display: inline-block;
+  background: linear-gradient(to right, orange, red);
+  padding: 12px 24px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
   text-decoration: none;
-  transition: transform 0.2s ease-in-out;
+  transition: 0.3s;
 }
 
 .resume-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px #ff6a00;
 }
 
-.resume-btn i {
-  margin-right: 10px;
-}
-.contact-section {
-  background-color: #0d0d0d;
-  padding: 80px 20px;
-  color: #fff;
-  text-align: center;
-}
-
-.contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #ff7f50;
-}
-
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-
-.contact-info {
-  flex: 1;
-  min-width: 250px;
-  font-size: 1.1rem;
-  text-align: left;
-}
-
-.contact-info i {
-  color: #ff4500;
-  margin-right: 10px;
-}
-
-.contact-form {
-  flex: 1;
-  min-width: 300px;
-  background: #1a1a1a;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(255, 119, 0, 0.2);
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  background: #111;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 1rem;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #aaa;
-}
-
-.contact-form button {
-  width: 100%;
-  padding: 12px;
-  background: linear-gradient(to right, #ff6a00, #ff8c00);
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: linear-gradient(to right, #ff4500, #ffa500);
-}
-#about {
-  padding: 60px 20px;
-  background-color: #0d0d0d;
-  color: #fff;
-  text-align: center;
-}
-
-.about-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.about-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #ddd;
-  background: #1a1a1a;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(255, 140, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-}
-
-.about-text:hover {
-  box-shadow: 0 0 25px rgba(255, 140, 0, 0.4);
-  transform: translateY(-5px);
-}
-html {
-  scroll-behavior: smooth;
-}
-.about-text ul {
-  padding-left: 20px;
-  font-size: 1.1rem;
-  color: #ddd;
-}
-
-.about-text li {
-  margin-bottom: 12px;
-}
-
-.about-text strong {
-  color: #ff6f00;
-}
-.skill-concepts {
-  margin-top: 10px;
-  padding-left: 20px;
-  font-size: 0.95rem;
-  color: #ccc;
-  list-style-type: disc;
-}
-
-.skill-concepts li {
-  margin-bottom: 6px;
-}
-.skill-concepts {
-  margin-top: 10px;
-  padding-left: 0; /* Remove extra left padding */
-  list-style-position: inside; /* Align bullets properly */
-  font-size: 0.95rem;
-  color: #ccc;
-}
-
-.skill-concepts li {
-  margin-left: 10px; /* Slight indent to align with heading */
-  margin-bottom: 6px;
-}
-.skill-concepts {
-  padding-left: 0;
-}
-
-.skill-concepts li {
-  text-indent: -1em;
-  padding-left: 1.5em;
-  margin-bottom: 6px;
-}
-.skills-list {
-  list-style-position: outside;
-  padding-left: 20px;
-}
-
-.skills-list li span {
-  display: inline-block;
-  padding-left: 10px; /* this shifts text to the right while keeping bullet on left */
-}
-.box-container {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.box {
-  background-color: #111;
-  color: #fff;
-  padding: 20px;
-  border-radius: 20px;
-  width: 400px;
-  box-shadow: 0 0 15px #ff5500;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 480px; /* ✅ fixed height to keep all equal */
-}
-.skill-bar {
-  background-color: #333;
-  height: 8px;
-  border-radius: 10px;
-  margin: 10px 0 20px;
-}
-
-.bar-fill {
-  height: 100%;
-  background: linear-gradient(to right, orange, red);
-  border-radius: 10px;
-}
-<style>
-  .box-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 40px 20px;
-  }
-
-  .box {
-    background-color: #111;
-    padding: 30px;
-    border-radius: 20px;
-    width: 420px;
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
-    transition: transform 0.3s ease;
-    height: 480px;
-  }
-
-  .box:hover {
-    transform: translateY(-10px);
-  }
-
-  .box h2 {
-    text-align: center;
-    font-size: 24px;
-    color: #fff;
-    margin-bottom: 15px;
-  }
-
-  .skill-bar {
-    background-color: #333;
-    height: 8px;
-    border-radius: 10px;
-    margin: 10px 0 25px;
-  }
-
-  .bar-fill {
-    height: 100%;
-    background: linear-gradient(to right, orange, red);
-    border-radius: 10px;
-  }
-
-  .box ul {
-    color: #ddd;
-    font-size: 16px;
-    line-height: 1.8;
-    list-style-position: inside;
-  }
-
-  .box ul li {
-    margin-bottom: 6px;
-  }
-</style>
-<style>
-  .box-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 40px 20px;
-  }
-
-  .box {
-    background-color: #111;
-    padding: 25px 20px;
-    border-radius: 20px;
-    width: 420px;
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
-    transition: transform 0.3s ease;
-    height: auto; /* ✅ Remove fixed height to auto-fit content */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .box:hover {
-    transform: translateY(-10px);
-  }
-
-  .box h2 {
-    text-align: center;
-    font-size: 24px;
-    color: #fff;
-    margin-bottom: 15px;
-  }
-
-  .skill-bar {
-    background-color: #333;
-    height: 8px;
-    border-radius: 10px;
-    margin: 10px 0 25px;
-    overflow: hidden;
-  }
-
-  .bar-fill {
-    height: 100%;
-    background: linear-gradient(to right, orange, red);
-    border-radius: 10px;
-  }
-
-  .box ul {
-    color: #ddd;
-    font-size: 16px;
-    line-height: 1.8;
-    list-style-position: inside;
-    padding-left: 0;
-    margin: 0;
-  }
-
-  .box ul li {
-    margin-bottom: 5px;
-  }
-
-  /* ✅ Mobile responsive fix */
-  @media (max-width: 480px) {
-    .box {
-      width: 90%;
-      padding: 20px 15px;
-    }
-
-    .box h2 {
-      font-size: 20px;
-    }
-
-    .box ul {
-      font-size: 15px;
-      line-height: 1.6;
-    }
-  }
-</style>
-.skill-bar {
-  background-color: #333;
-  height: 18px; /* 🔥 Increased from 8px to 18px */
-  border-radius: 10px;
-  margin: 10px 0 25px;
-  overflow: hidden;
-}
-.skill-box {
-  background-color: #111;
-  border-radius: 20px;
-  padding: 30px;
-  width: 100%;
-  box-shadow: 0 0 25px 8px #ff8000 !important; /* Glow zyada + override forced */
-  margin: 20px;
-}
-/* General Body */
-body {
-  background-color: #0e0e0e;
-  font-family: Arial, sans-serif;
-  color: white;
-  margin: 0;
-  padding: 0;
-}
-
-/* About Section */
-.about-section {
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px;
-}
-
-.about-box {
-  background-color: #121212;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 35px 5px #ff8000 !important;
-  width: 80%;
-  max-width: 900px;
-  text-align: left;
-}
-
-.about-box h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-.about-list {
-  list-style: none;
-  padding: 0;
-}
-
-.about-list li {
-  margin-bottom: 15px;
-  display: flex;
-  align-items: flex-start;
-}
-
-
-/* Hire Button */
-.hire-button {
-  display: block;
-  margin: 40px auto 0;
-  padding: 12px 28px;
-  background: linear-gradient(to right, orange, red);
-  color: white;
-  font-weight: bold;
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 0 25px orange;
-  transition: 0.3s;
-}
-
-.hire-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 35px red;
-}
-
-/* Skills Section */
-.skills-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 40px 20px;
-}
-
-.skill-box {
-  background-color: #121212;
-  padding: 30px;
-  width: 350px;
-  border-radius: 20px;
-  box-shadow: 0 0 35px 5px orange;
-}
-
-.skill-box h3 {
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-}
-
-.skill-box ul {
-  padding-left: 20px;
-}
-
-.skill-box ul li {
-  margin-bottom: 10px;
-}
-
-/* Progress Bar */
-.progress-bar {
-  background-color: #2c2c2c;
-  height: 12px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.progress {
-  height: 100%;
-  background: linear-gradient(to right, orange, red);
-  border-radius: 20px;
-}
-
-/* SKILLS SECTION (CSS) */
-.skills-section {
-  padding: 80px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0a0a0a;
-}
-
-.skills-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1400px;
-}
-
-.skill-box {
-  background-color: #111;
-  padding: 30px;
-  border-radius: 20px;
-  width: 300px;
-  min-height: 460px;
-  text-align: center;
-  color: white;
-  box-shadow: 0 0 25px 5px orange;
-  transition: 0.3s ease;
-}
-
-.skill-box h2 {
-  margin-bottom: 15px;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-.skill-box ul {
-  list-style-type: disc;
-  text-align: left;
-  padding-left: 20px;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #333;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.progress {
-  height: 100%;
-  border-radius: 10px;
-  background: linear-gradient(to right, orange, red);
-}
-
-.progress.excel { width: 95%; }
-.progress.powerbi { width: 90%; }
-.progress.python { width: 85%; }
-.progress.sql { width: 80%; }
-<style>
-.hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 60px auto;
-}
-
-
-.profile-img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid orange;
-  margin-bottom: 20px;
-}
-.hero h1 {
-  font-size: 48px;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.hero h1 span {
-  color: orange;
-}
-
-.hero p {
-  font-size: 22px;
-  color: #ddd;
-}
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 400px; /* Adjust as needed */
-  padding: 20px;
-}
-
-.profile-img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid orange;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.hero h1 span {
-  color: orange;
-}
-
-.hero p {
-  font-size: 22px;
-  color: #ddd;
-}
-.hero {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-  height: 400px !important;
-  padding: 20px !important;
-}
-.hero {
-  width: 80%;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 40px 20px;
-  background-color: #111;
-  border-radius: 30px;
- box-shadow: 0 0 35px 5px #ff8000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.profile-pic {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 5px solid orange;
-  margin-bottom: 20px;
-  object-fit: cover;
-}
-
-.hero h1 {
-  font-size: 48px;
-  color: white;
-  margin: 10px 0;
-}
-
-.hero h1 span {
-  color: orange;
-}
-
-.hero p {
-  font-size: 20px;
-  color: #ccc;
-  max-width: 800px;
-}
-.about-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
-.about-box {
-  background-color: #111;
-  border-radius: 30px;
-  box-shadow: 0 0 40px 10px orange;
-  padding: 40px;
-  width: 85%;
-  max-width: 1100px;
-  color: white;
-  text-align: left;
-  box-sizing: border-box;
-}
-
-.about-box h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-.about-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.about-list li {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.about-list li strong {
-  margin-right: 5px;
-}
-
-.hire-button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.hire-button {
-  padding: 12px 30px;
-  background: linear-gradient(to right, #ff8000, #ff0000);
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 0 20px #ff8000;
-  transition: all 0.3s ease;
-}
-
-.hire-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #ff4500;
-}
-
-.about-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.about-item span {
-  font-weight: bold;
-  min-width: 110px;
-}
-
-@media (max-width: 600px) {
-  .about-item {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 8px;
-    word-break: break-word;
-  }
-
-  .about-item span {
-    min-width: unset;
-    font-weight: bold;
-  }
-
-  .about-box {
-    padding: 20px;
-  }
-}
+/* ========== Fade Animation ========== */
 .fade-up {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
 }
 
 .fade-up.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .hero,
+  .about-box {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .about-box h2 {
+    font-size: 28px;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .section-container {
+    gap: 40px;
+  }
 }
