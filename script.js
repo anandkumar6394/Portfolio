@@ -116,29 +116,55 @@ function initHoverEffects() {
     });
 }
 
-// 4. Email Functionality
+// 4. Contact Functionality (Email + Phone + Instagram)
 function initEmailFunctionality() {
-    const contactCards = document.querySelectorAll('.contact-card');
-    
-    contactCards.forEach(card => {
-        const cardText = card.textContent.toLowerCase();
+    // Email Card
+    const emailCard = document.querySelector('.email-card');
+    if (emailCard) {
+        emailCard.style.cursor = 'pointer';
+        emailCard.title = 'Click to send email';
         
-        if (cardText.includes('email') || cardText.includes('anandkrpra3244@gmail.com')) {
-            card.style.cursor = 'pointer';
-            card.title = 'Click to send email';
+        emailCard.addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
             
-            card.addEventListener('click', function() {
-                // Add click animation
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 150);
-                
-                // Open email client
-                window.location.href = 'mailto:anandkrpra3244@gmail.com?subject=Portfolio Contact&body=Hi Anand, I saw your portfolio and would like to connect...';
-            });
-        }
-    });
+            window.location.href = 'mailto:anandkrpra3244@gmail.com?subject=Portfolio Contact&body=Hi Anand, I saw your portfolio and would like to connect...';
+        });
+    }
+
+    // Phone Card
+    const phoneCard = document.querySelector('.phone-card');
+    if (phoneCard) {
+        phoneCard.style.cursor = 'pointer';
+        phoneCard.title = 'Click to call';
+        
+        phoneCard.addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+            
+            window.location.href = 'tel:+916394676408';
+        });
+    }
+
+    // Instagram Card
+    const instaCard = document.querySelector('.instagram-card');
+    if (instaCard) {
+        instaCard.style.cursor = 'pointer';
+        instaCard.title = 'Follow on Instagram';
+        
+        instaCard.addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+            
+            window.open('https://instagram.com/being_anand_18', '_blank');
+        });
+    }
 }
 
 // 5. Section Animation Delays
@@ -258,5 +284,6 @@ console.log(`
 
 Thanks for checking out the code! 😊
 `);
+
 
 // End of script.js
