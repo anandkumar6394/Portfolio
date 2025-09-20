@@ -69,8 +69,17 @@ a:hover {
 
 /* Sections */
 section {
-  padding: 60px 20px;
+  padding: 30px 15px;
   text-align: center;
+}
+.section-box {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin: 20px auto;   
+  max-width: 1000px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  border: 1px solid #ff6f00;
 }
 .container {
   max-width: 900px;
@@ -140,4 +149,5 @@ footer {
   box-shadow: 0 4px 20px rgba(0,0,0,0.4); /* Shadow for card effect */
   border: 1px solid #ff6f00;  /* Orange border */
 }
+
 
