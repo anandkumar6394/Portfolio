@@ -130,3 +130,14 @@ footer {
     flex-direction: column;
   }
 }
+/* Section Container Box */
+.section-box {
+  background: #1a1a1a;        /* Dark background inside section */
+  border-radius: 15px;        /* Rounded corners */
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 1000px;          /* Centered fixed width */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4); /* Shadow for card effect */
+  border: 1px solid #ff6f00;  /* Orange border */
+}
+
