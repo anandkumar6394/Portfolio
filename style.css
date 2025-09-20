@@ -1,3 +1,4 @@
+/* Reset and Basic Styling */
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +13,14 @@ body {
     min-height: 100vh;
 }
 
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Header */
+/* Header Section */
 .header {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -27,7 +29,6 @@ body {
     text-align: center;
     margin-bottom: 30px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    animation: fadeInUp 1s ease-out;
 }
 
 .profile-img {
@@ -42,7 +43,6 @@ body {
     font-size: 60px;
     color: white;
     font-weight: bold;
-    animation: pulse 2s infinite;
 }
 
 .header h1 {
@@ -52,13 +52,13 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.header .tagline {
+.tagline {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-.header .description {
+.description {
     color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
     max-width: 800px;
@@ -72,7 +72,6 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    animation: fadeInUp 1s ease-out;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -98,6 +97,12 @@ body {
     height: 3px;
     background: linear-gradient(45deg, #667eea, #764ba2);
     border-radius: 2px;
+}
+
+.section p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 /* Skills Grid */
@@ -129,6 +134,7 @@ body {
 .skill-card p {
     font-size: 0.9rem;
     opacity: 0.9;
+    margin-bottom: 0;
 }
 
 /* Projects Grid */
@@ -150,11 +156,18 @@ body {
 .project-card:hover {
     border-color: #667eea;
     transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .project-card h3 {
     color: #667eea;
     margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.project-card p {
+    color: #666;
+    margin-bottom: 0;
 }
 
 /* Contact Section */
@@ -172,6 +185,7 @@ body {
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .contact-card:hover {
@@ -180,30 +194,24 @@ body {
 
 .contact-card h3 {
     margin-bottom: 10px;
+    font-size: 1.2rem;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.contact-card p {
+    margin-bottom: 0;
+    opacity: 0.9;
 }
 
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
+/* Footer */
+.footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 0.9rem;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
@@ -220,14 +228,46 @@ body {
     .section {
         padding: 20px;
     }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        font-size: 50px;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.8);
-    margin-top: 40px;
-    padding: 20px;
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .profile-img {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
 }
-
-
