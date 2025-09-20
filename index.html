@@ -3,8 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anand Kumar - Portfolio</title
- <link rel="stylesheet" href="style.css">
+    <title>Anand Kumar - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 60px;
+            color: white;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .tagline {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .header .description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Section Styles */
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .section h2 {
+            color: #4a4a4a;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .skill-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: #667eea;
+            transform: translateY(-3px);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 40px;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -14,7 +247,7 @@
             <h1>Anand Kumar</h1>
             <p class="tagline">Diploma Student | Entrepreneur | Data Enthusiast</p>
             <p class="description">
-                I am Anand Kumar, a Diploma Student in Electrical Engineering (Industrial Control) and the Co-Founder & CEO of BrightAds, a growing marketing agency. Alongside managing my business, I have a strong passion for studying data and hold skills in Excel, Power BI, SQL, Python, and Tally.
+                I am Anand Kumar, a Diploma Student in Electrical Engineering (Industrial Control) and the Co-Founder & CEO of BrightAds, a growing marketing agency. Alongside managing my business, I have a strong passion for studying data and hold skills in Excel, Power BI, SQL, Python, and Tally. I use these skills not only for analytics but also to strengthen decision-making, optimize processes, and drive business growth.
             </p>
         </div>
 
@@ -59,6 +292,7 @@
         <div class="section">
             <h2>BrightAds - Marketing Agency</h2>
             <p>As Co-Founder & CEO of BrightAds, I lead a growing marketing agency focused on delivering innovative marketing solutions. We specialize in digital marketing strategies, data-driven campaigns, and helping businesses grow their online presence.</p>
+            <br>
             <p><strong>Services:</strong> Digital Marketing, Social Media Management, Data Analytics, Campaign Optimization, Business Consulting</p>
         </div>
 
@@ -82,15 +316,15 @@
             <h2>Get In Touch</h2>
             <div class="contact-info">
                 <div class="contact-card">
-                    <h3>Email</h3>
+                    <h3>📧 Email</h3>
                     <p>anandkrpra3244@gmail.com</p>
                 </div>
                 <div class="contact-card">
-                    <h3>Business</h3>
+                    <h3>💼 Business</h3>
                     <p>Open for collaborations and opportunities</p>
                 </div>
                 <div class="contact-card">
-                    <h3>BrightAds</h3>
+                    <h3>🚀 BrightAds</h3>
                     <p>Marketing solutions for your business</p>
                 </div>
             </div>
@@ -101,10 +335,39 @@
             <p>&copy; 2024 Anand Kumar. Built with passion and dedication.</p>
         </div>
     </div>
+
+    <script>
+        // Smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation delays to sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.2}s`;
+            });
+
+            // Add hover effects to cards
+            const cards = document.querySelectorAll('.skill-card, .project-card, .contact-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05) rotateZ(1deg)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1) rotateZ(0deg)';
+                });
+            });
+
+            // Email click functionality
+            const emailCard = document.querySelector('.contact-card');
+            if (emailCard) {
+                emailCard.addEventListener('click', function() {
+                    window.location.href = 'mailto:anandkrpra3244@gmail.com';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
-
-
 
 
 
