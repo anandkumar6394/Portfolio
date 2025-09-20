@@ -149,19 +149,20 @@ footer {
   box-shadow: 0 4px 20px rgba(0,0,0,0.4); /* Shadow for card effect */
   border: 1px solid #ff6f00;  /* Orange border */
 }
-/* Section Spacing Adjusted */
+/* Section spacing ko remove kar diya */
 section {
-  padding: 30px 15px;   /* Pehle 60px tha */
+  padding: 0;   /* ab koi extra padding nahi */
   text-align: center;
 }
 
+/* Container spacing adjust */
 .section-box {
   background: #1a1a1a;
   border-radius: 15px;
   padding: 40px 20px;
-  margin: 20px auto;    /* Pehle 30px tha */
+  margin: 10px auto;   /* upar-neche sirf 10px gap */
   max-width: 1000px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   border: 1px solid #ff6f00;
 }
 
