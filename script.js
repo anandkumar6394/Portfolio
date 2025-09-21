@@ -322,7 +322,34 @@ console.log(`
 
 Thanks for checking out the code! 😊
 `);
+// Contact Form Enhancement
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.querySelector('.submit-btn');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            // Add loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            
+            // Reset after form submission
+            setTimeout(() => {
+                submitBtn.textContent = 'Send Message';
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+            }, 3000);
+        });
+    }
+}
 
+// Add this to your DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing functions
+    initContactForm(); // Add this line
+});
 
 // End of script.js
+
 
