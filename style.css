@@ -175,17 +175,19 @@ body {
             margin-top: 20px;
         }
 
-        .contact-card {
-            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease;
+      .contact-card {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
         }
 
-        .contact-card:hover {
-            transform: scale(1.05);
+       .contact-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
         }
 
         .contact-card h3 {
@@ -408,5 +410,6 @@ html, body {
         grid-template-columns: 1fr;
     }
 }
+
 
 
