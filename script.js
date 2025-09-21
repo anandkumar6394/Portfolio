@@ -165,6 +165,22 @@ function initEmailFunctionality() {
             window.open('https://instagram.com/being_anand_18', '_blank');
         });
     }
+
+    // LinkedIn Card
+const linkedinCard = document.querySelector('.linkedin-card');
+if (linkedinCard) {
+    linkedinCard.style.cursor = 'pointer';
+    linkedinCard.title = 'View LinkedIn Profile';
+    
+    linkedinCard.addEventListener('click', function() {
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            this.style.transform = 'scale(1)';
+        }, 150);
+        
+        window.open('https://linkedin.com/in/anandkumar-data-analyst', '_blank');
+    });
+}
 }
 
 // 5. Section Animation Delays
@@ -351,5 +367,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // End of script.js
+
 
 
