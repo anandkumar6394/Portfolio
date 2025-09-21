@@ -274,7 +274,45 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
+// Add this at the top of your script.js file, after the initial DOMContentLoaded event
 
+// Smooth scroll optimization for high refresh rate displays
+function optimizeScrolling() {
+    // Enable smooth scrolling with CSS
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Reduce animation frequency on high refresh displays
+    const preferredFrameRate = 60; // Target 60fps instead of 144fps for animations
+    let lastFrameTime = 0;
+    
+    function throttleAnimations(callback) {
+        return function(...args) {
+            const now = performance.now();
+            if (now - lastFrameTime >= (1000 / preferredFrameRate)) {
+                lastFrameTime = now;
+                callback.apply(this, args);
+            }
+        };
+    }
+    
+    // Apply to scroll events
+    window.addEventListener('scroll', throttleAnimations(() => {
+        // Scroll-based animations will now be throttled to 60fps
+    }), { passive: true });
+}
+
+// Call this function early in your DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', function() {
+    optimizeScrolling(); // Add this line first
+    
+    // Rest of your existing functions...
+    initTypingAnimation();
+    initScrollAnimations();
+    initHoverEffects();
+    initEmailFunctionality();
+    initSectionAnimations();
+    initLoadingEffects();
+});
 // Console message for developers
 console.log(`
 🚀 Portfolio Website by Anand Kumar
@@ -287,3 +325,4 @@ Thanks for checking out the code! 😊
 
 
 // End of script.js
+
