@@ -240,6 +240,71 @@ body {
             padding: 20px;
         }
     </style>
+/* Performance Optimization for High Refresh Rate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    /* Performance fixes */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+    will-change: scroll-position;
+}
+
+/* Hardware acceleration for smooth animations */
+.section, .skill-card, .project-card, .contact-card, .header {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    will-change: transform, opacity;
+}
+
+/* Optimized transitions */
+.section {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card, .project-card, .contact-card {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Smooth scrolling with momentum */
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* GPU acceleration for containers */
+.container {
+    transform: translate3d(0, 0, 0);
+}
 
 
