@@ -599,6 +599,7 @@ html, body {
     color: white;
 }
 
+/* Copyright Modal - Bottom Position */
 .modal {
     display: none;
     position: fixed;
@@ -611,22 +612,27 @@ html, body {
     backdrop-filter: blur(5px);
 }
 
-.modal-content {
-    background-color: white;
-    margin: 5% auto;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 600px;
-    max-height: 80vh;
-    overflow-y: auto;
-    position: relative;
-    animation: modalSlideIn 0.3s ease-out;
+.modal.show {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 
-@keyframes modalSlideIn {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px 15px 0 0;
+    width: 95%;
+    max-width: 600px;
+    max-height: 70vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
 }
 
 .close {
@@ -656,71 +662,12 @@ html, body {
     margin-bottom: 10px;
 }
 
-.terms-content ul {
-    margin-left: 20px;
+#termsLink {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+    cursor: pointer;
 }
 
-.terms-content li {
-    margin-bottom: 8px;
+#termsLink:hover {
+    color: white;
 }
-/* Bottom Position Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    backdrop-filter: blur(5px);
-    display: flex;
-    align-items: flex-end; /* Bottom alignment */
-    justify-content: center;
-    padding-bottom: 20px; /* Small gap from bottom */
-}
-
-.modal-content {
-    background-color: white;
-    padding: 30px;
-    border-radius: 15px 15px 0 0; /* Rounded top corners only */
-    width: 95%;
-    max-width: 600px;
-    max-height: 70vh;
-    overflow-y: auto;
-    position: relative;
-    animation: modalSlideUp 0.3s ease-out;
-    margin: 0;
-}
-
-@keyframes modalSlideUp {
-    from { transform: translateY(100%); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-    .modal {
-        padding-bottom: 0;
-    }
-    
-    .modal-content {
-        width: 100%;
-        border-radius: 20px 20px 0 0;
-        max-height: 80vh;
-    }
-}
-
-/* Hide/Show classes */
-.modal:not(.show) {
-    display: none !important;
-}
-
-.modal.show {
-    display: flex !important;
-}
-
-
-
-
-
