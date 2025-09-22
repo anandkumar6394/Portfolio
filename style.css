@@ -650,7 +650,7 @@ html, body {
     color: #667eea;
 }
 
-/* Hidden Terms Container */
+/* Hidden Terms Container - Completely Hidden */
 .terms-container {
     position: fixed;
     bottom: 0;
@@ -658,17 +658,20 @@ html, body {
     right: 0;
     background: white;
     box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
-    transform: translateY(100%);
+    transform: translateY(100%); /* Completely off-screen */
     transition: transform 0.4s ease-out;
     z-index: 1000;
     max-height: 60vh;
     overflow-y: auto;
+    opacity: 0; /* Add opacity for extra hiding */
+    visibility: hidden; /* Extra hiding layer */
 }
 
 .terms-container.show {
     transform: translateY(0);
+    opacity: 1; /* Show when active */
+    visibility: visible; /* Make visible when active */
 }
-
 .terms-header {
     display: flex;
     justify-content: space-between;
@@ -724,3 +727,4 @@ html, body {
 #termsLink:hover {
     color: white;
 }
+
