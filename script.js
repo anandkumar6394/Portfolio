@@ -310,7 +310,6 @@ function optimizeScrolling() {
             }
         };
     }
-    
     // Apply to scroll events
     window.addEventListener('scroll', throttleAnimations(() => {
         // Scroll-based animations will now be throttled to 60fps
@@ -365,8 +364,41 @@ document.addEventListener('DOMContentLoaded', function() {
     // ... existing functions
     initContactForm(); // Add this line
 });
+// Copyright Modal Functionality
+function initCopyrightModal() {
+    const modal = document.getElementById('copyrightModal');
+    const termsLink = document.getElementById('termsLink');
+    const closeBtn = document.querySelector('.close');
+    
+    if (termsLink && modal) {
+        termsLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scroll
+        });
+        
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scroll
+        });
+        
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+}
+
+// Add to your DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing functions
+    initCopyrightModal(); // Add this line
+});
 
 // End of script.js
+
 
 
 
