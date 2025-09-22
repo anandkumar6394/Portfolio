@@ -149,31 +149,21 @@ body {
             margin-top: 20px;
         }
 
-      /* Updated Project Cards Styling - Sharp Corners & Better Image Display */
+    /* Project Cards - Sharp Corners & Full Images */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
 .project-card {
     background: white;
     border: 2px solid #e0e0e0;
-    border-radius: 0; /* Remove rounded corners */
     padding: 0;
     transition: all 0.3s ease;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-.project-image {
-    width: 100%;
-    height: 250px; /* Increased height */
-    overflow: hidden;
-    position: relative;
-}
-
-.project-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Changed from cover to contain */
-    object-position: center;
-    background: #f8f9fa; /* Light background for better visibility */
-    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
@@ -182,8 +172,37 @@ body {
     box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
 }
 
-.project-card:hover .project-img {
-    transform: scale(1.02); /* Reduced scale for better fit */
+.project-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.project-card h3 {
+    color: #667eea;
+    margin: 20px 20px 10px 20px;
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: #666;
+    margin: 0 20px 15px 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 .tech-tags {
@@ -197,10 +216,16 @@ body {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     padding: 5px 12px;
-    border-radius: 0; /* Sharp corners for tags too */
     font-size: 0.8rem;
     font-weight: 500;
-    white-space: nowrap;
+}
+
+.tag:nth-child(2) {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+}
+
+.tag:nth-child(3) {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
 }
         /* Contact Section */
         .contact-info {
@@ -562,6 +587,7 @@ html, body {
         margin-right: 15px;
     }
 }
+
 
 
 
