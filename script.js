@@ -396,8 +396,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // ... existing functions
     initCopyrightModal(); // Add this line
 });
+// Terms Container Slide Effect
+function initTermsContainer() {
+    const termsLink = document.getElementById('termsLink');
+    const termsContainer = document.getElementById('termsContainer');
+    const closeBtn = document.querySelector('.terms-close');
+    
+    if (termsLink && termsContainer) {
+        termsLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            termsContainer.classList.add('show');
+        });
+        
+        closeBtn.addEventListener('click', function() {
+            termsContainer.classList.remove('show');
+        });
+    }
+}
 
+// Add to your DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing functions
+    initTermsContainer(); // Add this line
+});
 // End of script.js
+
 
 
 
