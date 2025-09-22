@@ -178,7 +178,7 @@ if (linkedinCard) {
             this.style.transform = 'scale(1)';
         }, 150);
         
-        window.open('https://linkedin.com/in/anandkumar-data-analyst', '_blank');
+        window.open('https://linkedin.com/in/anandkumarofficial/', '_blank');
     });
 }
 }
@@ -367,6 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // End of script.js
+
 
 
 
