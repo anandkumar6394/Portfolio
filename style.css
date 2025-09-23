@@ -650,7 +650,7 @@ html, body {
     color: #667eea;
 }
 
-/* Footer - Perfectly Centered */
+/* Footer - Bottom Position Fix */
 .footer {
     position: fixed;
     bottom: 20px;
@@ -658,7 +658,8 @@ html, body {
     right: 0;
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
-    z-index: 999;
+    z-index: 100; /* Reduced z-index */
+    pointer-events: none; /* Allow clicking through footer area */
 }
 
 .footer-container {
@@ -670,24 +671,18 @@ html, body {
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     margin-left: 20px;
     margin-right: 20px;
+    pointer-events: auto; /* Allow clicking on footer content */
 }
 
-.footer p {
-    margin: 0;
-    font-size: 0.9rem;
+/* Ensure sections don't overlap footer */
+.section:last-child {
+    margin-bottom: 120px; /* Extra space for footer */
 }
 
-.footer-subtitle {
-    font-size: 0.8rem !important;
-    margin-top: 5px !important;
-    opacity: 0.9;
-}
-
-/* Body padding for fixed footer */
+/* Body padding adjustment */
 body {
-    padding-bottom: 120px;
+    padding-bottom: 0; /* Remove body padding */
 }
-
 /* Responsive */
 @media (max-width: 768px) {
     .footer-container {
@@ -787,6 +782,7 @@ body {
 #termsLink:hover {
     color: white;
 }
+
 
 
 
