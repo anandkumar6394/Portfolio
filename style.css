@@ -650,31 +650,30 @@ html, body {
     color: #667eea;
 }
 
-/* Sticky Footer */
+/* Permanent Fixed Footer */
 .footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    padding: 15px 20px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    z-index: 500;
-    margin-top: 0; /* Remove any top margin */
+    z-index: 999;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 }
 
-/* Remove body bottom padding if any */
+/* Add bottom padding to body to prevent content overlap */
 body {
-    padding-bottom: 0;
+    padding-bottom: 60px; /* Space for fixed footer */
 }
 
-.container {
-    padding-bottom: 0; /* Remove container bottom padding */
-}
-
-/* Terms container positioning update */
+/* Terms container positioning */
 .terms-container {
     position: fixed;
-    bottom: 60px; /* Space for sticky footer */
+    bottom: 55px; /* Just above footer */
     left: 0;
     right: 0;
     background: white;
@@ -682,10 +681,16 @@ body {
     transform: translateY(100%);
     transition: transform 0.4s ease-out;
     z-index: 1000;
-    max-height: 60vh;
+    max-height: calc(100vh - 120px); /* Responsive height */
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
+}
+
+.terms-container.show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 .terms-container.show {
@@ -748,5 +753,6 @@ body {
 #termsLink:hover {
     color: white;
 }
+
 
 
