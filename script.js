@@ -414,12 +414,8 @@ function initTermsContainer() {
     }
 }
 
-// Add to your DOMContentLoaded
-document.addEventListener('DOMContentLoaded', function() {
-    // ... existing functions
-    initTermsContainer(); // Add this line
-});
 // End of script.js
+
 
 
 
