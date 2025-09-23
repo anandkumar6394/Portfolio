@@ -650,7 +650,7 @@ html, body {
     color: #667eea;
 }
 
-/* Permanent Fixed Footer */
+/* Simple Footer - No Popup */
 .footer {
     position: fixed;
     bottom: 0;
@@ -665,9 +665,20 @@ html, body {
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 }
 
-/* Add bottom padding to body to prevent content overlap */
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-subtitle {
+    font-size: 0.8rem !important;
+    margin-top: 5px !important;
+    opacity: 0.9;
+}
+
+/* Body padding for fixed footer */
 body {
-    padding-bottom: 60px; /* Space for fixed footer */
+    padding-bottom: 80px; /* Increased for two-line footer */
 }
 
 /* Terms container positioning */
@@ -753,6 +764,7 @@ body {
 #termsLink:hover {
     color: white;
 }
+
 
 
 
