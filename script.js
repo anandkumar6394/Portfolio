@@ -394,7 +394,6 @@ function initCopyrightModal() {
 // Add to your DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', function() {
     // ... existing functions
-    initCopyrightModal(); // Add this line
 });
 // Terms Container Slide Effect
 function initTermsContainer() {
@@ -415,6 +414,7 @@ function initTermsContainer() {
 }
 
 // End of script.js
+
 
 
 
