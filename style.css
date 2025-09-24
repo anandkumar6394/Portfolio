@@ -687,13 +687,14 @@ html, body {
   list-style-type: disc; /* Bullet points */
   text-align: left;      /* Text alignment normal rakha */
   margin-left: auto;     /* Isse poora block right side shift ho jayega */
-  margin-right: 50px;    /* Jitna chaahe utna right adjust kar */
+  margin-right: 70px;    /* Jitna chaahe utna right adjust kar */
   width: fit-content;    /* Sirf content ke width ke hisaab se block banega */
 }
 
 .description li {
   margin-bottom: 8px;
 }
+
 
 
 
