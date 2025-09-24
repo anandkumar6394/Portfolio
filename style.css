@@ -684,16 +684,23 @@ html, body {
     opacity: 0.9;
 }
 .description {
-  list-style-type: disc; /* Bullet points */
-  text-align: left;      /* Text alignment normal rakha */
-  margin-left: auto;     /* Isse poora block right side shift ho jayega */
-  margin-right: 70px;    /* Jitna chaahe utna right adjust kar */
-  width: fit-content;    /* Sirf content ke width ke hisaab se block banega */
+  list-style-type: disc;
+  text-align: left;
+  margin-left: auto;
+  margin-right: 70px;
+  width: fit-content;
+
+  font-family: 'Inter', sans-serif; /* Professional clean font */
+  font-weight: 600;  /* Semi-bold */
+  font-size: 16px;   /* Thoda readable size */
+  color: #f1f1f1;    /* Light white for better contrast on blue bg */
 }
 
 .description li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  line-height: 1.6;  /* Thoda gap for clean spacing */
 }
+
 
 
 
