@@ -109,6 +109,23 @@ body {
             background: linear-gradient(45deg, #667eea, #764ba2);
             border-radius: 2px;
         }
+.greeting-card {
+  background-color: #ffffff;   /* White card */
+  color: #333333;             /* Text color dark */
+  padding: 12px 20px;         /* Space inside card */
+  border-radius: 10px;        /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Soft shadow */
+  display: inline-block;      /* Card size = content size */
+  margin-top: 20px;           /* Gap from above content */
+}
+
+#greeting {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0; /* Extra space hata diya */
+}
+
 
         /* Skills Grid */
         .skills-grid {
@@ -700,6 +717,7 @@ html, body {
   margin-bottom: 10px;
   line-height: 1.6;  /* Thoda gap for clean spacing */
 }
+
 
 
 
