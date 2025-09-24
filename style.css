@@ -388,11 +388,18 @@ html, body {
     font-size: 1.1rem;
 }
 
-.contact-item p {
-    color: #666;
-    font-size: 0.95rem;
+.contact-info-text p {
+    color: #333 !important; /* Full black instead of #666 */
+    font-size: 1rem; 
+    line-height: 1.6;
 }
-
+/* Contact Me Text - Full Black */
+.contact-form-container .contact-info-text p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
 .contact-form {
     background: #f8f9fa;
     padding: 30px;
@@ -673,6 +680,7 @@ html, body {
     font-size: 0.8rem;
     opacity: 0.9;
 }
+
 
 
 
