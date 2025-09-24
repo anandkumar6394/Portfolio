@@ -685,7 +685,7 @@ html, body {
 }
 .description {
   list-style-type: disc; /* ya arrow chahiye to use kar sakta hai */
-  text-align: right; 
+  text-align: Left; 
   margin-right: 20px; 
   padding-right: 20px;
 }
@@ -693,6 +693,7 @@ html, body {
 .description li {
   margin-bottom: 8px;
 }
+
 
 
 
