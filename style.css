@@ -295,12 +295,15 @@ body {
         }
 
         /* Footer */
-        .footer {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.8);
-            margin-top: 40px;
-            padding: 20px;
-        }
+      .footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 40px;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-size: 0.9rem;
+    border-radius: 15px; /* Rounded corners added */
+}
     </style>
 /* Performance Optimization for High Refresh Rate */
 * {
@@ -680,6 +683,7 @@ html, body {
     font-size: 0.8rem;
     opacity: 0.9;
 }
+
 
 
 
