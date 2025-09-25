@@ -20,32 +20,51 @@ body {
             padding: 20px;
         }
 
-        /* Header */
-        .header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            margin-bottom: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            animation: fadeInUp 1s ease-out;
-        }
+      /* Two-Column Header Layout - Image Left, Text Right */
+.header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-        .profile-img {
-    width: 150px;
-    height: 150px;
+.header-content {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Image first, then text */
+    gap: 40px;
+    align-items: center;
+}
+
+.header-text {
+    text-align: left;
+}
+
+.header-text h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.header-image {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 60px;
-    color: white;
-    font-weight: bold;
-    overflow: hidden; /* YE IMPORTANT HAI */
-    border: 3px solid rgba(255,255,255,0.3); /* OPTIONAL BORDER */
+    overflow: hidden;
+    border: 4px solid rgba(255,255,255,0.3);
 }
 
 .profile-photo {
@@ -53,6 +72,28 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .header-text {
+        text-align: center;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .header-text h1 {
+        font-size: 2rem;
+    }
 }
 
         .header h1 {
@@ -700,6 +741,7 @@ html, body {
   margin-bottom: 10px;
   line-height: 1.6;  /* Thoda gap for clean spacing */
 }
+
 
 
 
