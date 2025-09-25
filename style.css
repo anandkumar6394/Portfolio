@@ -74,7 +74,7 @@ body {
     border-radius: 50%;
 }
 
-/* Responsive */
+/* Mobile Responsive Fix for Header */
 @media (max-width: 768px) {
     .header-content {
         grid-template-columns: 1fr;
@@ -82,17 +82,49 @@ body {
         gap: 20px;
     }
     
+    /* Image को top पर रखने के लिए order change करो */
+    .header-image {
+        order: 1; /* Image first */
+    }
+    
     .header-text {
+        order: 2; /* Text second */
         text-align: center;
     }
     
     .profile-img {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
     
     .header-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-top: 15px;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .greeting {
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+    }
+}
+
+/* Extra small mobile fix */
+@media (max-width: 480px) {
+    .header {
+        padding: 20px;
+    }
+    
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .header-text h1 {
+        font-size: 1.5rem;
     }
 }
         .header h1 {
@@ -740,6 +772,7 @@ html, body {
   margin-bottom: 10px;
   line-height: 1.6;  /* Thoda gap for clean spacing */
 }
+
 
 
 
