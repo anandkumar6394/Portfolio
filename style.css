@@ -20,7 +20,7 @@ body {
             padding: 20px;
         }
 
-    /* Two-Column Header Layout */
+  /* Two-Column Header Layout - Image Left, Text Right */
 .header {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -32,7 +32,7 @@ body {
 
 .header-content {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr; /* Image first, then text */
     gap: 40px;
     align-items: center;
 }
@@ -740,6 +740,7 @@ html, body {
   margin-bottom: 10px;
   line-height: 1.6;  /* Thoda gap for clean spacing */
 }
+
 
 
 
