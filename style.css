@@ -102,10 +102,17 @@ body {
         margin-top: 15px;
     }
     
+  .tagline {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem; /* Even smaller */
+    margin-bottom: 20px;
+    font-weight: 500; /* Lighter weight for smaller text */
+}
+    @media (max-width: 768px) {
     .tagline {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
-    
+}
     .greeting {
         font-size: 1rem !important;
         margin-bottom: 8px !important;
@@ -772,19 +779,6 @@ html, body {
   margin-bottom: 10px;
   line-height: 1.6;  /* Thoda gap for clean spacing */
 }
-
-.tagline {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem; /* Even smaller */
-    margin-bottom: 20px;
-    font-weight: 400; /* Lighter weight for smaller text */
-}
-@media (max-width: 768px) {
-    .tagline {
-        font-size: 0.85rem;
-    }
-}
-
 
 
 
