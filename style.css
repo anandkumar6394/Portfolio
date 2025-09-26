@@ -110,7 +110,7 @@ body {
 }
     @media (max-width: 768px) {
     .tagline {
-        font-size: 0.85rem;
+        font-size: 0.55rem;
     }
 }
     .greeting {
@@ -779,6 +779,7 @@ html, body {
   margin-bottom: 10px;
   line-height: 1.6;  /* Thoda gap for clean spacing */
 }
+
 
 
 
