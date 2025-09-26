@@ -114,10 +114,14 @@ body {
         font-size: 0.55rem;
     }
 }
-    .greeting {
-        font-size: 1rem !important;
-        margin-bottom: 8px !important;
-    }
+  .greeting {
+    color: #ff6b35 !important; /* Orange color */
+    text-align: center !important; /* Center alignment */
+    font-weight: bold !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 10px !important;
+    width: 100% !important;
+    display: block !important;
 }
 
 /* Extra small mobile fix */
@@ -780,6 +784,7 @@ html, body {
   margin-bottom: 10px;
   line-height: 1.6;  /* Thoda gap for clean spacing */
 }
+
 
 
 
