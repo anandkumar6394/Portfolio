@@ -244,7 +244,7 @@ function initParallaxEffect() {
     });
 }
 
-// Add dynamic greeting based on time
+// Updated Dynamic Greeting Function - Center & Orange Color
 function addDynamicGreeting() {
     const hour = new Date().getHours();
     let greeting = '';
@@ -253,22 +253,18 @@ function addDynamicGreeting() {
     else if (hour < 17) greeting = '☀️ Good Afternoon!';
     else greeting = '🌙 Good Evening!';
     
-    const description = document.querySelector('.description');
-    if (description) {
-        const greetingElement = document.createElement('p');
+    const greetingElement = document.getElementById('dynamicGreeting');
+    if (greetingElement) {
         greetingElement.textContent = greeting;
         greetingElement.style.fontSize = '1.1rem';
-        greetingElement.style.marginTop = '15px';
         greetingElement.style.fontWeight = 'bold';
-        description.parentNode.insertBefore(greetingElement, description.nextSibling);
+        greetingElement.style.color = '#ff6b35'; // Orange color
+        greetingElement.style.marginBottom = '10px';
+        greetingElement.style.textAlign = 'center'; // Center alignment
+        greetingElement.style.width = '100%'; // Full width for centering
+        greetingElement.style.display = 'block'; // Block display for center effect
     }
 }
-
-// Initialize special effects on load
-setTimeout(() => {
-    addDynamicGreeting();
-    // initParallaxEffect(); // Uncomment if you want parallax
-}, 2000);
 
 // Add some Easter eggs for fun
 let clickCount = 0;
