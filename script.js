@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-// 1. Typing Animation for Tagline
+// Typing Animation for Tagline
 function initTypingAnimation() {
     const tagline = document.querySelector('.tagline');
     if (!tagline) return;
@@ -21,6 +21,8 @@ function initTypingAnimation() {
     const text = tagline.textContent;
     tagline.textContent = '';
     tagline.style.borderRight = '2px solid rgba(255,255,255,0.8)';
+    tagline.style.fontSize = '0.85rem'; // Add this line - smaller font size
+    tagline.style.fontWeight = '500'; // Add this line - lighter weight
     
     let i = 0;
     function typeWriter() {
@@ -414,6 +416,7 @@ function initTermsContainer() {
 }
 
 // End of script.js
+
 
 
 
