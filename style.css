@@ -104,7 +104,7 @@ body {
     
   .tagline {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 0.5rem; /* Even smaller */
+    font-size: 0.2rem; /* Even smaller */
     margin-bottom: 20px;
     font-weight: 500; /* Lighter weight for smaller text */
 }
@@ -779,6 +779,7 @@ html, body {
   margin-bottom: 10px;
   line-height: 1.6;  /* Thoda gap for clean spacing */
 }
+
 
 
 
