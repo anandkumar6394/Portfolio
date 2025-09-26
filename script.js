@@ -244,27 +244,6 @@ function initParallaxEffect() {
     });
 }
 
-// Updated Dynamic Greeting Function - Center & Orange Color
-function addDynamicGreeting() {
-    const hour = new Date().getHours();
-    let greeting = '';
-    
-    if (hour < 12) greeting = '🌅 Good Morning!';
-    else if (hour < 17) greeting = '☀️ Good Afternoon!';
-    else greeting = '🌙 Good Evening!';
-    
-    const greetingElement = document.getElementById('dynamicGreeting');
-    if (greetingElement) {
-        greetingElement.textContent = greeting;
-        greetingElement.style.fontSize = '1.1rem';
-        greetingElement.style.fontWeight = 'bold';
-        greetingElement.style.color = '#ff6b35'; // Orange color
-        greetingElement.style.marginBottom = '10px';
-        greetingElement.style.textAlign = 'center'; // Center alignment
-        greetingElement.style.width = '100%'; // Full width for centering
-        greetingElement.style.display = 'block'; // Block display for center effect
-    }
-}
 
 // Add some Easter eggs for fun
 let clickCount = 0;
@@ -412,6 +391,7 @@ function initTermsContainer() {
 }
 
 // End of script.js
+
 
 
 
