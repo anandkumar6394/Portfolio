@@ -125,10 +125,10 @@ body {
         padding: 20px;
     }
     
-    .profile-img {
-        width: 100px;
-        height: 100px;
-    }
+   .profile-img {
+    width: 130px; /* Change from 100px to 130px */
+    height: 130px; /* Change from 100px to 130px */
+}
     
     .header-text h1 {
         font-size: 1.5rem;
@@ -779,6 +779,7 @@ html, body {
   margin-bottom: 10px;
   line-height: 1.6;  /* Thoda gap for clean spacing */
 }
+
 
 
 
