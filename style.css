@@ -608,6 +608,172 @@ body {
 .about-phase:last-child {
     margin-bottom: 0;
 }
+.brightads-container {
+    margin-top: 20px;
+}
+
+.brightads-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff4757, #ff3838);
+    border-radius: 15px;
+    color: white;
+}
+
+.brightads-logo {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.brightads-intro h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.tagline-bright {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.brightads-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.brightads-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+.stat-item h4 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.stat-item p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.brightads-services {
+    margin-bottom: 30px;
+}
+
+.brightads-services h4 {
+    color: #667eea;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service-tag {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.brightads-contact {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact-bright h4 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #4facfe;
+}
+
+.contact-bright p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .brightads-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .brightads-logo {
+        margin: 0 auto;
+    }
+    
+    .brightads-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .brightads-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .brightads-stats {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 
