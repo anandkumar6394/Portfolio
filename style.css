@@ -33,13 +33,13 @@ body {
 
 /* Header Section */
 .header {
-    background: rgba(40, 56, 120, 0.9);
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 35%, #667eea 70%, #764ba2 100%);
     backdrop-filter: blur(15px);
     border-radius: 20px;
     padding: 40px;
     margin-bottom: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(79, 172, 254, 0.3);
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000px;
@@ -575,3 +575,4 @@ body {
         scroll-behavior: auto;
     }
 }
+
