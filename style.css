@@ -33,7 +33,7 @@ body {
 
 /* Header Section */
 .header {
-    background: linear-gradient(to right,#764ba2 100%, #4facfe 35%, #667eea 70%,#00f2fe 0%);
+    background: linear-gradient(to right,#764ba2 0%, #4facfe 35%, #667eea 70%,#00f2fe 100%);
     backdrop-filter: blur(15px);
     border-radius: 20px;
     padding: 40px;
@@ -796,6 +796,7 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
 }
+
 
 
 
