@@ -389,32 +389,6 @@ function initTermsContainer() {
         });
     }
 }
-// PDF Modal Functionality
-function initPitchDeckModal() {
-    const modal = document.getElementById('pdfModal');
-    const btn = document.getElementById('viewPitchDeck');
-    const closeBtn = document.querySelector('.pdf-close');
-    
-    if (btn && modal) {
-        btn.addEventListener('click', function() {
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent background scroll
-        });
-        
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore scroll
-        });
-        
-        // Close modal when clicking outside
-        window.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-    }
-}
 
 // Add to your DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', function() {
@@ -422,6 +396,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initPitchDeckModal(); // Add this line
 });
 // End of script.js
+
 
 
 
