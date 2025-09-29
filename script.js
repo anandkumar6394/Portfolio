@@ -425,7 +425,56 @@ document.addEventListener('DOMContentLoaded', function() {
     // ... existing functions
     initSecurePitchDeck(); // Add this line
 });
+// Project Image Zoom Popup
+function initProjectImageZoom() {
+    const projectImages = document.querySelectorAll('.project-img');
+    
+    // Create modal structure
+    const modal = document.createElement('div');
+    modal.className = 'image-zoom-modal';
+    modal.innerHTML = `
+        <span class="zoom-close">&times;</span>
+        <img class="zoomed-image" src="" alt="Project Image">
+    `;
+    document.body.appendChild(modal);
+    
+    const zoomedImg = modal.querySelector('.zoomed-image');
+    const closeBtn = modal.querySelector('.zoom-close');
+    
+    // Add click event to all project images
+    projectImages.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.title = 'Click to view full image';
+        
+        img.addEventListener('click', function() {
+            zoomedImg.src = this.src;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    // Close on background click
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Add to DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing functions
+    initProjectImageZoom(); // Add this line
+});
 // End of script.js
+
 
 
 
