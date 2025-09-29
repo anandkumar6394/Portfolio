@@ -406,7 +406,7 @@ function initSecurePitchDeck() {
             if (userPin === '7521') {
                 // Correct PIN - Allow download
                 const link = document.createElement('a');
-                link.href = 'Final All files of BrightAds.pdf';
+                link.href = 'Final All files of BrightAds .pdf';
                 link.download = 'BrightAds-Pitch-Deck.pdf';
                 link.click();
             } else if (userPin === null) {
@@ -426,6 +426,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSecurePitchDeck(); // Add this line
 });
 // End of script.js
+
 
 
 
