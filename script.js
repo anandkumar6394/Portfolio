@@ -395,7 +395,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // ... existing functions
     initPitchDeckModal(); // Add this line
 });
+// Pitch Deck Download with PIN Security
+function initSecurePitchDeck() {
+    const downloadBtn = document.getElementById('downloadPitchDeck');
+    
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function() {
+            const userPin = prompt('Enter Security PIN to download Pitch Deck:');
+            
+            if (userPin === '7521') {
+                // Correct PIN - Allow download
+                const link = document.createElement('a');
+                link.href = 'Final All files of BrightAds.pdf';
+                link.download = 'BrightAds-Pitch-Deck.pdf';
+                link.click();
+            } else if (userPin === null) {
+                // User cancelled
+                return;
+            } else {
+                // Wrong PIN
+                alert('Incorrect PIN. Access denied.');
+            }
+        });
+    }
+}
+
+// Add to your DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing functions
+    initSecurePitchDeck(); // Add this line
+});
 // End of script.js
+
 
 
 
