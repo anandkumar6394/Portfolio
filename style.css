@@ -796,6 +796,68 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
 }
+/* Image Zoom Modal */
+.image-zoom-modal {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.zoomed-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    animation: zoomIn 0.3s ease-out;
+}
+
+.zoom-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 3001;
+    transition: transform 0.3s ease;
+}
+
+.zoom-close:hover {
+    transform: scale(1.2);
+    color: #4facfe;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .zoomed-image {
+        max-width: 95%;
+        max-height: 80%;
+    }
+    
+    .zoom-close {
+        top: 10px;
+        right: 20px;
+        font-size: 35px;
+    }
+}
 
 
 
