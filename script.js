@@ -425,56 +425,64 @@ document.addEventListener('DOMContentLoaded', function() {
     // ... existing functions
     initSecurePitchDeck(); // Add this line
 });
-// Project Image Zoom Popup
+// Project Image Zoom Popup - Works for all images
 function initProjectImageZoom() {
-    const projectImages = document.querySelectorAll('.project-img');
+    // Check if modal already exists
+    let modal = document.querySelector('.image-zoom-modal');
     
-    // Create modal structure
-    const modal = document.createElement('div');
-    modal.className = 'image-zoom-modal';
-    modal.innerHTML = `
-        <span class="zoom-close">&times;</span>
-        <img class="zoomed-image" src="" alt="Project Image">
-    `;
-    document.body.appendChild(modal);
+    if (!modal) {
+        // Create modal only once
+        modal = document.createElement('div');
+        modal.className = 'image-zoom-modal';
+        modal.innerHTML = `
+            <span class="zoom-close">&times;</span>
+            <img class="zoomed-image" src="" alt="Project Image">
+        `;
+        document.body.appendChild(modal);
+        
+        const zoomedImg = modal.querySelector('.zoomed-image');
+        const closeBtn = modal.querySelector('.zoom-close');
+        
+        // Close functionality
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
     
     const zoomedImg = modal.querySelector('.zoomed-image');
-    const closeBtn = modal.querySelector('.zoom-close');
     
-    // Add click event to all project images
+    // Get ALL project images (including newly added ones)
+    const projectImages = document.querySelectorAll('.project-img');
+    
     projectImages.forEach(img => {
         img.style.cursor = 'pointer';
         img.title = 'Click to view full image';
         
-        img.addEventListener('click', function() {
+        // Remove old event listeners and add fresh ones
+        img.onclick = function() {
             zoomedImg.src = this.src;
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
-        });
-    });
-    
-    // Close modal
-    closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
-    
-    // Close on background click
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
+        };
     });
 }
 
-// Add to DOMContentLoaded
+// Call on page load
 document.addEventListener('DOMContentLoaded', function() {
     // ... existing functions
-    initProjectImageZoom(); // Add this line
+    initProjectImageZoom();
 });
 
 // End of script.js
+
 
 
 
