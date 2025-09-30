@@ -334,7 +334,7 @@ body {
 /* Contact Form */
 .contact-form-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 40px;
     margin-top: 30px;
 }
@@ -858,6 +858,7 @@ body {
         font-size: 35px;
     }
 }
+
 
 
 
